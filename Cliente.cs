@@ -43,7 +43,7 @@ namespace sistema_concessionaria
                         System.Console.WriteLine("Deseja Cadastrar novo Cliente Pessoa Física? \n 1 - Sim \n 2 - Não ");
                         novo = Console.ReadLine();
 
-                        StreamWriter sw = new StreamWriter("Cadastro de ClienteCPF.csv", true);
+                        StreamWriter sw = new StreamWriter("Cadastro de Cliente.csv", true);
                         sw.WriteLine(nome + ";" + cpf + ";" + dado);
                         sw.Close();
 
@@ -67,7 +67,7 @@ namespace sistema_concessionaria
                         System.Console.WriteLine("Deseja Cadastrar novo Cliente Pessoa Jurídica? \n 1 - Sim \n 2 - Não ");
                         novoPJ = Console.ReadLine();
 
-                        StreamWriter swpj = new StreamWriter("Cadastro de ClienteCNPJ.csv", true);
+                        StreamWriter swpj = new StreamWriter("Cadastro de Cliente.csv", true);
                         swpj.WriteLine(nome + ";" + cnpj + ";" + dado);
                         swpj.Close();
 

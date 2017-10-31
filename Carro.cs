@@ -12,7 +12,14 @@ namespace sistema_concessionaria
         private string ano { get; set; }
         private string cor { get; set; }
 
+        public string vendido { get; set; }
 
+        public double preco { get; set; }
+     
+        int codigo = 0;
+        
+
+        
         public void CadastrarCarro()
         {
 
@@ -33,10 +40,19 @@ namespace sistema_concessionaria
                 System.Console.WriteLine("Qual a cor? ");
                 cor = Console.ReadLine();
 
+                System.Console.WriteLine("Qual o preço ? ");
+                preco = Convert.ToDouble(Console.ReadLine());
+
+                vendido = "Disponível";
+
+                codigo ++;
+
+
+
                 string opcionais = Opcionais();
 
                 StreamWriter cw = new StreamWriter("Cadastro de Carros.csv", true);
-                cw.WriteLine(marca + ";" + modelo + ";" + ano + ";" + opcionais);
+                cw.WriteLine(marca + ";" + modelo + ";" + ano + ";" + opcionais + ";" + preco + ";" + vendido + ";" + codigo);
                 cw.Close();
 
                 System.Console.WriteLine("Deseja Cadastrar mais Carros?");
